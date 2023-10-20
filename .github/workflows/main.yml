@@ -30,8 +30,8 @@ jobs:
           ls -a ${{ github.workspace }}/base-code
       - name: List files in the markdown
         run: |
-          echo ${{ github.workspace }}/markdown
-          ls -a ${{ github.workspace }}/markdown          
+          echo ${{ github.workspace }}/base-code/doku
+          ls -a ${{ github.workspace }}/base-code/doku          
       - run: |
           pip install mkdocs-material      
       - run: |      
