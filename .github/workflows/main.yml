@@ -31,7 +31,8 @@ jobs:
           cd ${{ github.workspace }}/base-code
           mkdir docs
           mkdocs build --config-file ${{ github.workspace }}/base-code/mkdocs.yml --site-dir site
-      - run: |          
+      - run: |       
+          cd ${{ github.workspace }}/base-code
           mkdocs gh-deploy --config-file ${{ github.workspace }}/base-code/mkdocs.yml
       - run: |          
           cd ${{ github.workspace }}
