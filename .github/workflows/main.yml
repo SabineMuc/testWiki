@@ -22,5 +22,6 @@ jobs:
       # Here we use the private Action 
       - name: List files in the repository
         run: |
-          ls /home/runner/work/testWiki/
+          > newfile
+          ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
