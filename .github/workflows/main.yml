@@ -9,13 +9,16 @@ jobs:
     name: get Wiki
     runs-on: ubuntu-latest
     steps: 
- 
-      - name: Checkout Actions 
-        uses: actions/checkout@v4 
-        with: 
-          repository: ${{github.repository}}.wiki
-          path: wiki 
-          ref: main    
+    - name: Checkout base code
+      uses: actions/checkout@v2
+      with:
+        path: base-code
+    - name: Checkout wiki code
+      uses: actions/checkout@v2
+      with:
+        repository: ${{github.repository}}.wiki
+        path: markdown
+          
       # Here we use the private Action 
       - name: Echo              
         uses: ./blogpost-actions-central/.github/actions/echo 
