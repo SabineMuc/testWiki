@@ -34,6 +34,8 @@ jobs:
           echo "commit site"
           cd ${{ github.workspace }}/base-code
           git pull
+          git config --global user.email "Sabine.Franz@capgemini.com"
+          git config --global user.name "SabineMuc"
           git add site
           git commit -m "sdfsdf"
           git push
