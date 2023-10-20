@@ -23,7 +23,7 @@ jobs:
       - name: List files in the repository
         run: |
           echo ${{ github.workspace }}
-          ls -R -a ${{ github.workspace }}
+          ls -a ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - run: |
           pip install mkdocs-material      
