@@ -27,11 +27,13 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - run: |
           pip install mkdocs-material      
-          echo ${{ github.workspace }}/base-code/mkdocs.yml
+      - run: |      
           cd ${{ github.workspace }}/base-code
           mkdir docs
           mkdocs build --config-file ${{ github.workspace }}/base-code/mkdocs.yml --site-dir site
+      - run: |          
           mkdocs gh-deploy --config-file ${{ github.workspace }}/base-code/mkdocs.yml
+      - run: |          
           cd ${{ github.workspace }}
           git pull
           git add site
