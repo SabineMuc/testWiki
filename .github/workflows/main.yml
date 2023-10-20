@@ -32,7 +32,7 @@ jobs:
           mkdocs build --config-file ${{ github.workspace }}/base-code/mkdocs.yml --site-dir site
       - run: |          
           echo "commit site"
-          cd ${{ github.workspace }}
+          cd ${{ github.workspace }}/base-code
           git pull
           git add site
           git commit -m "sdfsdf"
