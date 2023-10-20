@@ -1,1 +1,5 @@
 site_name: CARIAD APP TOOLKIT APP
+docs_dir: 'doku'
+plugins:
+  - search
+  - awesome-pages
