@@ -13,7 +13,7 @@ jobs:
       - name: Checkout Actions 
         uses: actions/checkout@v4 
         with: 
-          repository: SabineMuc/testWiki.wiki.git
+          repository: ${{github.repository}}.wiki
           path: wiki 
           ref: main    
       # Here we use the private Action 
