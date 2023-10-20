@@ -30,10 +30,6 @@ jobs:
           cd ${{ github.workspace }}/base-code
           mkdir docs
           mkdocs build --config-file ${{ github.workspace }}/base-code/mkdocs.yml --site-dir site
-      - run: |       
-          echo "gh-deploy"
-          cd ${{ github.workspace }}/base-code
-          mkdocs gh-deploy --config-file ${{ github.workspace }}/base-code/mkdocs.yml
       - run: |          
           echo "commit site"
           cd ${{ github.workspace }}
@@ -41,3 +37,8 @@ jobs:
           git add site
           git commit -m "sdfsdf"
           git push
+
+      - run: |       
+          echo "gh-deploy"
+          cd ${{ github.workspace }}/base-code
+          mkdocs gh-deploy --config-file ${{ github.workspace }}/base-code/mkdocs.yml          
