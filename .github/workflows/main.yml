@@ -20,6 +20,7 @@ jobs:
           path: markdown
           
       # Here we use the private Action 
-      - run: ls
-      - name: Main
-        run: node scripts/setup-npm-version.js
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+      - run: echo "🍏 This job's status is ${{ job.status }}."
