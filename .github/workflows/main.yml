@@ -20,5 +20,6 @@ jobs:
           path: markdown
           
       # Here we use the private Action 
-      - name: Create annotation for build error
-        run: echo ls    
+      - run: ls
+      - name: Main
+        run: node scripts/setup-npm-version.js
