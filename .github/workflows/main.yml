@@ -23,5 +23,5 @@ jobs:
       - name: List files in the repository
         run: |
           > newfile
-          ls -R -a ${{ github.workspace }}
+          ls -R -a ${{ github.workspace }}/markdown
       - run: echo "🍏 This job's status is ${{ job.status }}."
