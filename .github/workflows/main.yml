@@ -23,8 +23,7 @@ jobs:
       - name: List files in the repository
         run: |
           > newfile
-          ls -a ${{ github.workspace }}/markdown
+          ls -a -r ${{ github.workspace }}/markdown
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - run: |
-          pip install mkdocs-material
-          mkdocs gh-deploy
+          pip install mkdocs-material          
