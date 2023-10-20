@@ -33,7 +33,8 @@ jobs:
           echo ${{ github.workspace }}/base-code/doku
           ls -a ${{ github.workspace }}/base-code/doku          
       - run: |
-          pip install mkdocs-material      
+          pip install mkdocs-material    
+          pip install mkdocs-awesome-pages-plugin
       - run: |      
           mkdocs build --config-file ${{ github.workspace }}/base-code/mkdocs.yml --site-dir site
       - run: |          
