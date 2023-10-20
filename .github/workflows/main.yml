@@ -20,7 +20,5 @@ jobs:
           path: markdown
           
       # Here we use the private Action 
-      - name: Echo              
-        uses: ./blogpost-actions-central/.github/actions/echo 
-        with:                  
-          text: "Hello World!"       
+      - name: Create annotation for build error
+        run: echo ls    
