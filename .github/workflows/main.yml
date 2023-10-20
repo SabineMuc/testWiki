@@ -30,5 +30,8 @@ jobs:
           echo ${{ github.workspace }}/base-code/mkdocs.yml
           cd ${{ github.workspace }}/base-code
           mkdir docs
-          mkdocs build --config-file ${{ github.workspace }}/base-code/mkdocs.yml
+          mkdocs build --config-file ${{ github.workspace }}/base-code/mkdocs.yml --site-dir site
           mkdocs gh-deploy --config-file ${{ github.workspace }}/base-code/mkdocs.yml
+          git add site
+          git commit -m "sdfsdf"
+          git push
