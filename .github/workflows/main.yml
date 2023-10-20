@@ -28,3 +28,4 @@ jobs:
       - run: |
           pip install mkdocs-material      
           echo ${{ github.workspace }}/base-code/mkdocs.yml
+          mkdocs build --config-file ${{ github.workspace }}/base-code/mkdocs.yml
