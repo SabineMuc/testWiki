@@ -27,4 +27,4 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - run: |
           pip install mkdocs-material      
-          mkdocs gh-deploy -f  ${{ github.workspace }}/base-code/mkdocs.yml
+          echo ${{ github.workspace }}/base-code/mkdocs.yml
