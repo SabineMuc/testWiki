@@ -1,0 +1,23 @@
+name: Publis DXP
+
+
+on:
+  workflow_dispatch
+  
+jobs:
+  PrepareWiki:
+    name: get Wiki
+    runs-on: ubuntu-latest
+    steps: 
+ 
+      - name: Checkout Actions 
+        uses: actions/checkout@v4 
+        with: 
+          repository: SabineMuc/testWiki.wiki.git
+          path: wiki 
+          ref: main    
+      # Here we use the private Action 
+      - name: Echo              
+        uses: ./blogpost-actions-central/.github/actions/echo 
+        with:                  
+          text: "Hello World!"        
