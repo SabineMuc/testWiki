@@ -25,3 +25,6 @@ jobs:
           > newfile
           ls -a ${{ github.workspace }}/markdown
       - run: echo "🍏 This job's status is ${{ job.status }}."
+      - run: |
+          pip install mkdocs-material
+          mkdocs build
