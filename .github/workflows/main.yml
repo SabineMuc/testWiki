@@ -3,6 +3,8 @@ name: Publis DXP
 
 on:
   workflow_dispatch
+permissions:
+  contents: write
   
 jobs:
   PrepareWiki:
